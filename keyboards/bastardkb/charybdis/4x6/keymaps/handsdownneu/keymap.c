@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, KC_ESCAPE, RALT(KC_7), XXXXXXX, LSFT(KC_8), RALT(KC_RBRC),  /**/  KC_GRAVE,   LSFT(KC_9),   XXXXXXX,   RALT(KC_0), LSFT(KC_EQUAL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_SLASH, LSFT(KC_RBRC), LSFT(KC_0), LSFT(KC_SLASH), LSFT(KC_4),  /**/  LSFT(ns),   OSM(MOD_LCTL),   OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
+       XXXXXXX, KC_SLASH, LSFT(KC_RBRC), LSFT(KC_0), LSFT(KC_SLASH), LSFT(KC_4),  /**/  KC_NUHS,   OSM(MOD_LCTL),   OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, KC_RBRC, RALT(KC_NUBS), RALT(KC_Q), LSFT(KC_7), LSFT(KC_5),  /**/  XXXXXXX,   RALT(KC_MINUS),   LSFT(KC_6),   LSFT(KC_MINUS), LSFT(KC_1), XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
