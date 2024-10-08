@@ -1,5 +1,5 @@
 {
-    "userspace_version": "1.0",
+    "userspace_version": "1.1",
     "build_targets": [
         ["bastardkb/charybdis/4x6", "hands-down-neu"]
     ]
