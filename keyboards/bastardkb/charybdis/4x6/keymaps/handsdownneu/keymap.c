@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,    KC_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
-                                           XXXXXXX, XXXXXXX,     XXXXXXX
+                                           XXXXXXX, XXXXXXX,     NUMBERS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_P,    KC_V,    S(KC_NO), KC_DOT, XXXXXXX,    KC_Y, XXXXXXX, XXXXXXX,
+       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_1,    KC_V,    S(KC_NO), KC_0, XXXXXXX,    KC_Y, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
