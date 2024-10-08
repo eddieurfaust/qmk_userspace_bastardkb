@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,    KC_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
-                                           XXXXXXX, XXXXXXX,     NUMBERS
+                                           XXXXXXX, XXXXXXX,     XXXXXXX
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -118,20 +118,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [LAYER_NUMBERS] = LAYOUT(
-  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_7,    KC_5,    KC_3,    KC_1,    KC_9,       KC_8,    KC_0,    KC_2,    KC_4,    KC_6, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT),    OSM(MOD_LCTL),  KC_F11,    KC_F10,   OSM(MOD_RCTL),    OSM(MOD_RSFT),    OSM(MOD_RALT),    OSM(MOD_RGUI), XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_F7,   KC_F5,   KC_F3,   KC_F1,  KC_F9,      KC_F8,    KC_F12,   KC_F2,  KC_F4,   KC_F6, XXXXXXX,
-  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
-                                           XXXXXXX, XXXXXXX,     XXXXXXX
-  //                            ╰───────────────────────────╯ ╰──────────────────╯
-  ),
 };
 // clang-format on
 
