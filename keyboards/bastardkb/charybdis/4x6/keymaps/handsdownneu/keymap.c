@@ -62,6 +62,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #endif // !POINTING_DEVICE_ENABLE
 
 #define C_S(a) (LCTL(LSFT(a)))
+#define LCG(a) (LCTL(LGUI(a)))
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
