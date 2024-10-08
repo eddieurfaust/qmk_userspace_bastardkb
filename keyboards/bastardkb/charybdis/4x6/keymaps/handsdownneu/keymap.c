@@ -85,14 +85,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_LBRC,   KC_P7,   KC_P8,   KC_P9, KC_RBRC, XXXXXXX,
+       XXXXXXX, KC_ESCAPE, RALT(KC_7), XXXXXXX, LSFT(KC_8), RALT(KC_RBRACKET),  /**/  KC_GRAVE,   LSFT(KC_9),   XXXXXXX,   RALT(KC_0), LSFT(KC_EQUAL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    KC_PPLS,   KC_P4,   KC_P5,   KC_P6, KC_PMNS, XXXXXXX,
+       XXXXXXX, KC_SLASH, LSFT(KC_RBRACKET), LSFT(KC_0), LSFT(KC_SLASH), LSFT(KC_4),  /**/  LSFT(KC_EQUAL),   OSM(MOD_LCTL),   OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_PAST,   KC_P1,   KC_P2,   KC_P3, KC_PSLS, XXXXXXX,
+       XXXXXXX, KC_RBRACKET, RALT(KC_NONUS_BSLASH), RALT(KC_Q), LSFT(KC_7), LSFT(KC_5),  /**/  XXXXXXX,   RALT(KC_MINUS),   LSFT(KC_6),   LSFT(KC_MINUS), LSFT(KC_1), XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
-                                           XXXXXXX, XXXXXXX,      KC_P0
+                                  XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                           XXXXXXX, XXXXXXX,    XXXXXXX
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
