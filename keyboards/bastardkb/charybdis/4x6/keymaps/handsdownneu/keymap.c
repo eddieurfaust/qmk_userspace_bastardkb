@@ -25,6 +25,7 @@ enum charybdis_keymap_layers {
     LAYER_LOWER,
     LAYER_RAISE,
     LAYER_POINTER,
+    LAYER_NUMBERS
 };
 
 /** \brief Automatically enable sniping-mode on the pointer layer. */
@@ -46,6 +47,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define RAISE MO(LAYER_RAISE)
 #define PT_Z LT(LAYER_POINTER, KC_Z)
 #define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
+#define NUMBERS MO(LAYER_NUMBERS)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -67,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,    KC_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
-                                           XXXXXXX, XXXXXXX,     XXXXXXX
+                                           XXXXXXX, XXXXXXX,     NUMBERS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -113,6 +115,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
                                            XXXXXXX, KC_BTN2,    KC_BTN2
+  //                            ╰───────────────────────────╯ ╰──────────────────╯
+  ),
+
+  [LAYER_NUMBERS] = LAYOUT(
+  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX,    KC_7,    KC_5,    KC_3,    KC_1,    KC_9,       KC_8,    KC_0,    KC_2,    KC_4,    KC_6, XXXXXXX,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT),    OSM(MOD_LCTL),  KC_F11,    KC_F10,   OSM(MOD_RCTL),    OSM(MOD_RSFT),    OSM(MOD_RALT),    OSM(MOD_RGUI), XXXXXXX,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX,    KC_F7,   KC_F5,   KC_F3,   KC_F1,  KC_F9,      KC_F8,    KC_F12,   KC_F2,  KC_F4,   KC_F6, XXXXXXX,
+  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                   LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
+                                           XXXXXXX, XXXXXXX,     XXXXXXX
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
