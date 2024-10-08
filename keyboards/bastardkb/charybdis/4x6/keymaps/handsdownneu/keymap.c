@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, OSM(MOD_LGUI),   OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), XXXXXXX,  /**/   XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, LCG(KC_LEFT), LCG(KC_RIGHT), XXXXXXX,  LCTL(KC_F), XXXXXXX,  /**/  XXXXXXX, KC_PGDOWN, KC_PGUP, XXXXXXX, KC_ENTER, XXXXXXX,
+       XXXXXXX, LCG(KC_LEFT), LCG(KC_RIGHT), XXXXXXX,  LCTL(KC_F), XXXXXXX,  /**/  XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, KC_ENTER, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   XXXXXXX, XXXXXXX, XXXXXXX,    _______, XXXXXXX,
                                            XXXXXXX, XXXXXXX,    XXXXXXX
