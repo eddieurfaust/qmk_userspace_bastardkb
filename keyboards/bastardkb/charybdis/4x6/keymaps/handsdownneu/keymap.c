@@ -27,9 +27,9 @@
 
 enum charybdis_keymap_layers {
     LAYER_BASE = 0,
-    LAYER_LOWER,
-    LAYER_RAISE,
     LAYER_POINTER,
+    LAYER_SYMBOL,
+    LAYER_NAVIGATION,
     LAYER_NUMBERS
 };
 
@@ -48,11 +48,11 @@ static uint16_t auto_pointer_layer_timer = 0;
 #    endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD
 #endif     // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 
-#define LOWER MO(LAYER_LOWER)
-#define RAISE MO(LAYER_RAISE)
-#define PT_Z LT(LAYER_POINTER, KC_Z)
-#define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
+#define SYMBOL MO(LAYER_SYMBOL)
+#define NAVIGATION MO(LAYER_NAVIGATION)
 #define NUMBERS MO(LAYER_NUMBERS)
+#define PT_X LT(LAYER_POINTER, KC_X)
+#define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -71,14 +71,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
+       XXXXXXX,    PT_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   LOWER, KC_LSFT,   XXXXXXX,      KC_SPC,  RAISE,
+                                 SYMBOL, KC_LSFT,   XXXXXXX,     KC_SPC, NAVIGATION,
                                            XXXXXXX, XXXXXXX,     NUMBERS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [LAYER_LOWER] = LAYOUT(
+  [LAYER_SYMBOL] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [LAYER_RAISE] = LAYOUT(
+  [LAYER_NAVIGATION] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
