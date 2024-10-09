@@ -169,7 +169,7 @@ combo_t key_combos[] = {
     COMBO(letter_oe, KC_SEMICOLON),
     COMBO(letter_ue, KC_LEFT_BRACKET),
     COMBO(letter_ss, KC_MINUS),
-    COMBO(left_brackets, KC_NONUS_BSLASH),
+    COMBO(left_brackets, KC_NONUS_BACKSLASH),
     COMBO(right_brackets, LSFT(KC_NONUS_BACKSLASH))
 };
 
