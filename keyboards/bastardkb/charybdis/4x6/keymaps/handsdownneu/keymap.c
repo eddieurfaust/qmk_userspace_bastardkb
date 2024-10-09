@@ -132,9 +132,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_7,    KC_5,    KC_3,    KC_1,    KC_9,    KC_8, KC_0, KC_2,    KC_4,   KC_6, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_F11,  /**/  KC_10,   OSM(MOD_RGUI), OSM(MOD_RALT), OSM(MOD_RSFT), OSM(MOD_RCTL), XXXXXXX,
+       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_F11,  /**/  KC_F10,   OSM(MOD_RGUI), OSM(MOD_RALT), OSM(MOD_RSFT), OSM(MOD_RCTL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_F7,    KC_F5,    KC_F3,    KC_F1,    KC_F9,    KC_F8, KC_12, KC_F2,    KC_F4,   KC_F6, XXXXXXX,
+       XXXXXXX,    KC_F7,    KC_F5,    KC_F3,    KC_F1,    KC_F9,    KC_F8, KC_F12, KC_F2,    KC_F4,   KC_F6, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    SYMBOL, KC_LSFT,   XXXXXXX,      KC_SPC,  NAVIGATION,
                                            XXXXXXX, XXXXXXX,     XXXXXXX
