@@ -170,7 +170,7 @@ combo_t key_combos[] = {
     COMBO(letter_ue, KC_LEFT_BRACKET),
     COMBO(letter_ss, KC_MINUS),
     COMBO(left_brackets, KC_NONUS_BSLASH),
-    COMBO(right_brackets, LSFT(KC_NONUS_BSLASH))
+    COMBO(right_brackets, LSFT(KC_NONUS_BACKSLASH))
 };
 
 // clang-format on
