@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, KC_TAB, LALT(KC_TAB), C_S(KC_TAB), LCTL(KC_TAB), XXXXXXX,  /**/   XXXXXXX, KC_HOME, KC_UP, KC_END, KC_DELETE, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, OSM(MOD_LGUI),   OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), XXXXXXX,  /**/   XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC, XXXXXXX,
+       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), XXXXXXX,  /**/   XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, LCG(KC_LEFT), LCG(KC_RIGHT), XXXXXXX,  LCTL(KC_F), XXXXXXX,  /**/  XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, KC_ENTER, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
@@ -130,11 +130,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_1,    KC_V,    S(KC_NO), KC_0, XXXXXXX,    KC_Y,   XXXXXXX, XXXXXXX,
+       XXXXXXX,    KC_7,    KC_5,    KC_3,    KC_1,    KC_9,    KC_8, KC_0, KC_2,    KC_4,   KC_6, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
+       XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_F11,  /**/  KC_10,   OSM(MOD_RGUI), OSM(MOD_RALT), OSM(MOD_RSFT), OSM(MOD_RCTL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_X,    KC_C,    KC_L,    KC_D,    KC_G,    XXXXXXX,    KC_U,    KC_O,    KC_Z,    KC_K, XXXXXXX,
+       XXXXXXX,    KC_F7,    KC_F5,    KC_F3,    KC_F1,    KC_F9,    KC_F8, KC_12, KC_F2,    KC_F4,   KC_F6, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    SYMBOL, KC_LSFT,   XXXXXXX,      KC_SPC,  NAVIGATION,
                                            XXXXXXX, XXXXXXX,     XXXXXXX
