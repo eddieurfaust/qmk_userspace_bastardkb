@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_ESCAPE, RALT(KC_7), XXXXXXX, LSFT(KC_8), RALT(KC_RBRC),  /**/  KC_GRAVE,   LSFT(KC_9),   XXXXXXX,   RALT(KC_0), LSFT(KC_EQUAL), XXXXXXX,
+       XXXXXXX, KC_ESCAPE, RALT(KC_7), KC_LBRC, LSFT(KC_8), RALT(KC_RBRC),  /**/  KC_GRAVE,   LSFT(KC_9),   KC_RBRC,   RALT(KC_0), LSFT(KC_EQUAL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, KC_SLASH, LSFT(KC_RBRC), LSFT(KC_0), LSFT(KC_SLASH), LSFT(KC_4),  /**/  KC_NUHS,   OSM(MOD_LCTL),   OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -156,6 +156,8 @@ const uint16_t PROGMEM letter_ae[] = {KC_A, KC_O, COMBO_END};
 const uint16_t PROGMEM letter_oe[] = {KC_O, KC_E, COMBO_END};
 const uint16_t PROGMEM letter_ue[] = {KC_U, KC_E, COMBO_END};
 const uint16_t PROGMEM letter_ss[] = {KC_R, KC_S, COMBO_END};
+const uint16_t PROGMEM left_brackets[] = {KC_LEFT_BRACKET, LSFT(KC_0), COMBO_END};
+const uint16_t PROGMEM right_brackets[] = {KC_RIGHT_BRACKET, OSM(MOD_LSFT), COMBO_END};
 combo_t key_combos[] = {
     COMBO(overview, LGUI(KC_TAB)),
     COMBO(cut, LCTL(KC_X)),
@@ -166,7 +168,9 @@ combo_t key_combos[] = {
     COMBO(letter_ae, KC_QUOTE),
     COMBO(letter_oe, KC_SEMICOLON),
     COMBO(letter_ue, KC_LEFT_BRACKET),
-    COMBO(letter_ss, KC_MINUS)
+    COMBO(letter_ss, KC_MINUS),
+    COMBO(left_brackets, LSFT(KC_COMMA)),
+    COMBO(right_brackets, LSFT(KC_DOT))
 };
 
 // clang-format on
