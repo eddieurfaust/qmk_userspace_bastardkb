@@ -61,8 +61,9 @@ static uint16_t auto_pointer_layer_timer = 0;
 #    define SNIPING KC_NO
 #endif // !POINTING_DEVICE_ENABLE
 
-#define C_S(a) (LCTL(LSFT(a)))
-#define LCG(a) (LCTL(LGUI(a)))
+// Macros
+#define C_S(a) (LCTL(LSFT(a)))  // Control + Shift
+#define LCG(a) (LCTL(LGUI(a)))  // Control + Gui
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -156,8 +157,11 @@ const uint16_t PROGMEM letter_ae[] = {KC_A, KC_O, COMBO_END};
 const uint16_t PROGMEM letter_oe[] = {KC_O, KC_E, COMBO_END};
 const uint16_t PROGMEM letter_ue[] = {KC_U, KC_E, COMBO_END};
 const uint16_t PROGMEM letter_ss[] = {KC_R, KC_S, COMBO_END};
-const uint16_t PROGMEM left_brackets[] = {KC_LEFT_BRACKET, LSFT(KC_0), COMBO_END};
-const uint16_t PROGMEM right_brackets[] = {KC_RIGHT_BRACKET, OSM(MOD_LSFT), COMBO_END};
+const uint16_t PROGMEM left_angle_bracket[] = {RALT(KC_8), LSFT(KC_0), COMBO_END};
+const uint16_t PROGMEM right_angle_bracket[] = {RALT(KC_9), OSM(MOD_LSFT), COMBO_END};
+
+const uint16_t PROGMEM num_layer[] = {NAVIGATION, SYMBOL, COMBO_END};
+
 combo_t key_combos[] = {
     COMBO(overview, LGUI(KC_TAB)),
     COMBO(cut, LCTL(KC_X)),
@@ -169,8 +173,9 @@ combo_t key_combos[] = {
     COMBO(letter_oe, KC_SEMICOLON),
     COMBO(letter_ue, KC_LEFT_BRACKET),
     COMBO(letter_ss, KC_MINUS),
-    COMBO(left_brackets, KC_NONUS_BACKSLASH),
-    COMBO(right_brackets, LSFT(KC_NONUS_BACKSLASH))
+    COMBO(left_angle_bracket, KC_NONUS_BACKSLASH),
+    COMBO(right_angle_bracket, LSFT(KC_NONUS_BACKSLASH)),
+    COMBO(num_layer, NUMBERS)
 };
 
 // clang-format on
