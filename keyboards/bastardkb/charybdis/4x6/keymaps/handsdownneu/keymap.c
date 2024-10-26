@@ -151,7 +151,7 @@ const uint16_t PROGMEM overview[] = {KC_F, KC_M, COMBO_END};
 const uint16_t PROGMEM cut[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM copy[] = {KC_C, KC_L, COMBO_END};
 const uint16_t PROGMEM paste[] = {KC_L, KC_D, COMBO_END};
-const uint16_t PROGMEM letter_q[] = {KC_H, KC_K, COMBO_END};
+const uint16_t PROGMEM letter_z[] = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM letter_j[] = {KC_Y, KC_I, COMBO_END};
 const uint16_t PROGMEM letter_ae[] = {KC_A, KC_O, COMBO_END};
 const uint16_t PROGMEM letter_oe[] = {KC_O, KC_E, COMBO_END};
@@ -167,7 +167,7 @@ combo_t key_combos[] = {
     COMBO(cut, LCTL(KC_X)),
     COMBO(copy, LCTL(KC_C)),
     COMBO(paste, LCTL(KC_V)),
-    COMBO(letter_q, KC_Q),
+    COMBO(letter_z, KC_Y),
     COMBO(letter_j, KC_J),
     COMBO(letter_ae, KC_QUOTE),
     COMBO(letter_oe, KC_SEMICOLON),
