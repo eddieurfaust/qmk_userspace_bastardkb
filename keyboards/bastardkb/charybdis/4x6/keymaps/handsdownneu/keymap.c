@@ -69,6 +69,9 @@ static uint16_t auto_pointer_layer_timer = 0;
 // * TAP DANCE
 // ********************************************************************
 // taken from example 3: https://docs.qmk.fm/features/tap_dance#examples
+#define ACTION_TAP_DANCE_TAP_HOLD(tap, hold) \
+    { .fn = {NULL, tap_dance_tap_hold_finished, tap_dance_tap_hold_reset}, .user_data = (void *)&((tap_dance_tap_hold_t){tap, hold, 0}), }
+
 enum {
     CT_CLN,
 };
@@ -122,9 +125,6 @@ void tap_dance_tap_hold_reset(tap_dance_state_t *state, void *user_data) {
         tap_hold->held = 0;
     }
 }
-
-#define ACTION_TAP_DANCE_TAP_HOLD(tap, hold) \
-    { .fn = {NULL, tap_dance_tap_hold_finished, tap_dance_tap_hold_reset}, .user_data = (void *)&((tap_dance_tap_hold_t){tap, hold, 0}), }
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
