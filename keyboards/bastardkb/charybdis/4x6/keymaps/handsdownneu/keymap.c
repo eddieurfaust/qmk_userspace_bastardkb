@@ -85,7 +85,7 @@ typedef struct {
 } tap_dance_tap_hold_t;
 
 tap_dance_action_t tap_dance_actions[] = {
-    [CT_CLN] = ACTION_TAP_DANCE_TAP_HOLD(KC_COLN, KC_SCLN)
+    [CT_CLN] = ACTION_TAP_DANCE_TAP_HOLD(KC_A, KC_B)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
