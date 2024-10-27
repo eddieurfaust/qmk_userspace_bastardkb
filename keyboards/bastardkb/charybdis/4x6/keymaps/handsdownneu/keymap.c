@@ -67,6 +67,29 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define LCG(a) (LCTL(LGUI(a)))  // Control + Gui
 
 // ********************************************************************
+// * MACROS
+// ********************************************************************
+// see https://jayliu50.github.io/qmk-cheatsheet/#macros
+// Macro Declarations
+enum {
+    YOUR_MACRO_1 = 0,
+};
+
+// Macro Definitions
+const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
+{
+  switch(id) {
+    case YOUR_MACRO_1: {
+        if (record->event.pressed) {
+            SEND_STRING("qu");
+            return false;
+        }
+    }
+  }
+  return MACRO_NONE;
+};
+
+// ********************************************************************
 // * TAP DANCE
 // ********************************************************************
 // taken from example 3: https://docs.qmk.fm/features/tap_dance#examples
@@ -77,7 +100,7 @@ void tap_dance_tap_hold_reset(tap_dance_state_t *state, void *user_data);
     { .fn = {NULL, tap_dance_tap_hold_finished, tap_dance_tap_hold_reset}, .user_data = (void *)&((tap_dance_tap_hold_t){tap, hold, 0}), }
 
 enum {
-    CT_CLN,
+    Q_QU,
 };
 typedef struct {
     uint16_t tap;
@@ -86,14 +109,14 @@ typedef struct {
 } tap_dance_tap_hold_t;
 
 tap_dance_action_t tap_dance_actions[] = {
-    [CT_CLN] = ACTION_TAP_DANCE_TAP_HOLD(KC_A, KC_B)
+    [Q_QU] = ACTION_TAP_DANCE_TAP_HOLD(KC_Q, M(YOUR_MACRO_1))
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     tap_dance_action_t *action;
 
     switch (keycode) {
-        case TD(CT_CLN):  // list all tap dance keycodes with tap-hold configurations
+        case TD(Q_QU):  // list all tap dance keycodes with tap-hold configurations
             action = &tap_dance_actions[QK_TAP_DANCE_GET_INDEX(keycode)];
             if (!record->event.pressed && action->state.count && !action->state.finished) {
                 tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)action->user_data;
@@ -140,7 +163,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    PT_X,    KC_C,    KC_L,    KC_D,    KC_G,    TD(CT_CLN),    KC_U,    KC_O,    DE_Y,    KC_K, XXXXXXX,
+       XXXXXXX,    PT_X,    KC_C,    KC_L,    KC_D,    KC_G,    TD(Q_QU),    KC_U,    KC_O,    DE_Y,    KC_K, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                NAVIGATION, KC_LSFT, XXXXXXX,  KC_SPC, SYMBOL,
                                            XXXXXXX, XXXXXXX,     NUMBERS
@@ -166,11 +189,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_TAB, LALT(KC_TAB), C_S(KC_TAB), LCTL(KC_TAB), XXXXXXX,  /**/   XXXXXXX, KC_HOME, KC_UP, KC_END, KC_DELETE, XXXXXXX,
+       XXXXXXX, KC_TAB, A(KC_TAB), C_S(KC_TAB), C(KC_TAB), XXXXXXX,  /**/   XXXXXXX, KC_HOME, KC_UP, KC_END, KC_DELETE, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), XXXXXXX,  /**/   XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, LCG(KC_LEFT), LCG(KC_RIGHT), XXXXXXX,  LCTL(KC_F), XXXXXXX,  /**/  XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, KC_ENTER, XXXXXXX,
+       XXXXXXX, LCG(KC_LEFT), LCG(KC_RIGHT), MEH(N),  C(KC_F), XXXXXXX,  /**/  XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, KC_ENTER, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   XXXXXXX, XXXXXXX, XXXXXXX,    _______, XXXXXXX,
                                            XXXXXXX, XXXXXXX,    XXXXXXX
@@ -205,7 +228,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    SYMBOL, KC_LSFT,   XXXXXXX,      KC_SPC,  NAVIGATION,
                                            XXXXXXX, XXXXXXX,     XXXXXXX
   //                            ╰───────────────────────────╯ ╰──────────────────╯
-  ),
+  )
 };
 
 // ********************************************************************
