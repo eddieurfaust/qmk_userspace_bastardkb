@@ -69,24 +69,10 @@ static uint16_t auto_pointer_layer_timer = 0;
 // ********************************************************************
 // * MACROS
 // ********************************************************************
-// see https://jayliu50.github.io/qmk-cheatsheet/#macros
+// see https://getreuer.info/posts/keyboards/macros/index.html
 // Macro Declarations
-enum {
-    YOUR_MACRO_1 = 0,
-};
-
-// Macro Definitions
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-  switch(id) {
-    case YOUR_MACRO_1: {
-        if (record->event.pressed) {
-            SEND_STRING("qu");
-            return false;
-        }
-    }
-  }
-  return MACRO_NONE;
+enum custom_keycodes {
+  YOUR_MACRO_1 = SAFE_RANGE,
 };
 
 // ********************************************************************
@@ -116,12 +102,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     tap_dance_action_t *action;
 
     switch (keycode) {
-        case TD(Q_QU):  // list all tap dance keycodes with tap-hold configurations
+        case TD(Q_QU):  // Tap Dance Q/QU - list all tap dance keycodes with tap-hold configurations
             action = &tap_dance_actions[QK_TAP_DANCE_GET_INDEX(keycode)];
             if (!record->event.pressed && action->state.count && !action->state.finished) {
                 tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)action->user_data;
                 tap_code16(tap_hold->tap);
             }
+        case YOUR_MACRO_1:  // Actual Macro QU
+            if (record->event.pressed) {
+                SEND_STRING("qu");
+            }
+            return false;
     }
     return true;
 }
