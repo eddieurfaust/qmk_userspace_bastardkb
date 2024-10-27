@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_P,    KC_V,    S(DE_7), KC_DOT, S(DE_MINS), S(DE_2), S(DE_8), XXXXXXX,
+       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_P,    KC_V,    DE_SLSH, KC_DOT, DE_UNDS, DE_DQUO, DE_LPRN, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -151,11 +151,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_ESCAPE, RALT(KC_7), RALT(KC_8), LSFT(KC_8), RALT(KC_RBRC),  /**/  KC_GRAVE,   LSFT(KC_9),   RALT(KC_9),   RALT(KC_0), LSFT(KC_EQUAL), XXXXXXX,
+       XXXXXXX, KC_ESC, DE_LCBR, DE_LBRC, DE_LPRN, DE_TILD,     DE_CIRC, DE_RPRN, DE_RBRC, DE_RCBR, DE_ACUT, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_SLASH, LSFT(KC_RBRC), LSFT(KC_0), LSFT(KC_SLASH), LSFT(KC_4),  /**/  KC_NUHS,   OSM(MOD_LCTL),   OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
+       XXXXXXX, DE_MINS, DE_ASTR, DE_EQL, DE_UNDS, DE_DLR,      DE_HASH, OSM(MOD_LCTL), OSM(MOD_LSFT), OSM(MOD_LALT), OSM(MOD_LGUI), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_RBRC, RALT(KC_NUBS), RALT(KC_Q), LSFT(KC_7), LSFT(KC_5),  /**/  XXXXXXX,   RALT(KC_MINUS),   LSFT(KC_6),   LSFT(KC_MINUS), LSFT(KC_1), XXXXXXX,
+       XXXXXXX, DE_PLUS, DE_PIPE, DE_AT,  DE_SLSH, DE_PERC,     XXXXXXX, DE_BSLS, DE_AMPR, DE_QUES, DE_EXLM, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                            XXXXXXX, XXXXXXX,    XXXXXXX
@@ -196,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_7,    KC_5,    KC_3,    KC_1,    KC_9,    KC_8, KC_0, KC_2,    KC_4,   KC_6, XXXXXXX,
+       XXXXXXX,    DE_7,    DE_5,    DE_3,    DE_1,    DE_9,    DE_8, DE_0, DE_2,    DE_4,   DE_6, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_F11,  /**/  KC_F10,   OSM(MOD_RGUI), OSM(MOD_RALT), OSM(MOD_RSFT), OSM(MOD_RCTL), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
