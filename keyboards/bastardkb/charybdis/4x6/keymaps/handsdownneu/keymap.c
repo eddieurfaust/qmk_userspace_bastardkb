@@ -20,7 +20,7 @@
 // ********************************************************************
 
 #include QMK_KEYBOARD_H
-#include "keymap_german.h"
+#include "keymap_german.h"  // https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_german.h
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_P,    KC_V,    LSFT(KC_7), KC_DOT, LSFT(KC_SLASH), LSFT(KC_8), LSFT(KC_2), XXXXXXX,
+       XXXXXXX,    KC_W,    KC_F,    KC_M,    KC_P,    KC_V,    S(DE_7), KC_DOT, S(DE_MINS), S(DE_2), S(DE_8), XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX,    KC_R,    KC_S,    KC_N,    KC_T,    KC_B,    KC_COMMA,   KC_A,    KC_E,    KC_I,    KC_H, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
